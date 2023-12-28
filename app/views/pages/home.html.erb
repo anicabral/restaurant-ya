@@ -1,2 +1,19 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner text-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "banner-rest.png"%>');">
+      <h1>Restaurants YA!</h1>
+      <a class="btn btn-flat" href="#">Pide YA!</a>
+      <div class="form-group has-search mt-3 w-50 mx-auto">
+        <%= form_with url: restaurants_path, method: :get do %>
+        <span class="fa-solid fa-magnifying-glass lupa"></span>
+        <%= text_field_tag :query, nil, class: "form-control", placeholder:"Elige a los mejores restaurantes del mundo"%>
+        <% end %>
+      </div>
+</div>
+
+<div class = "container">
+  <div class = "row mb-5">
+    <h6 class= "text-warning"> Restaurants </h6>
+      <% @restaurants.each do |restaurant| %>
+        <%= render "restaurants/restaurant", restaurant: restaurant%>
+      <%end%>
+    </div>
+</div>

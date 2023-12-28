@@ -1,0 +1,7 @@
+<div class="col-4">
+  <%=link_to restaurant_path(restaurant) do %>
+    <div class="card-category" style= "background-image: url('<%=url_for restaurant.photo%>')">
+       <%= restaurant.name%>
+    </div>
+  <%end%>
+</div>

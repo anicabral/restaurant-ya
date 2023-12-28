@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col d-flex">
+      <div class="me-3">
+        <%= image_tag @restaurant.photo, size: "380x200"%>
+      </div>
+      <div>
+        <h4 class="text-secondary"><%= @restaurant.name %></h4>
+        <p><%= @restaurant.description %></p>
+        <p><%= @restaurant.address %></p>
+        <% @restaurant.categories.each do |category| %>
+          <%= category.name %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<h4>Platos</h4>
+<div class="row">
+<% @restaurant.dishes.each do |dish|%>
+  <div class="col-3">
+    <div class="card" style="width: 18rem;">
+      <%= image_tag dish.photo, class: "card-img-top" %>
+      <div class="card-body">
+        <h5 class="card-title"><%= dish.name %></h5>
+      <p class="card-text"><%= dish.description %></p>
+      <p class="text-success">Price: <%= dish.price %></p>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>

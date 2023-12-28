@@ -1,0 +1,7 @@
+<%= simple_form_for [@restaurant, @dish] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit%>
+<% end %>

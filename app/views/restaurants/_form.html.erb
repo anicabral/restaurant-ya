@@ -1,0 +1,17 @@
+<div class = "container w-75 border shadow mt-5 p-3">
+    <%= simple_form_for restaurant do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :address %>
+      <%= f.input :category_ids, as: :select, input_html:{ data: {controller: "dropdown"}, multiple: true}, collection: @categories, label: 'selecciona una categoria' %>
+      <%= image_tag restaurant.photo, size: "50x50"%> <%= f.input :photo, as: :file %>
+      <div class="row">
+        <div class="col">
+          <%= f.submit restaurant.new_record? ? "Save": "Update", class:"btn btn-primary w-100" %>
+        </div>
+        <div class="col-1 me-5">
+          <%= link_to "volver",my_restaurants_path, class:"btn btn-volver"%>
+        </div>
+      </div>
+    <% end %>
+</div>
