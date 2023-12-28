@@ -4,7 +4,7 @@
       <%= f.input :description %>
       <%= f.input :address %>
       <%= f.input :category_ids, as: :select, input_html:{ data: {controller: "dropdown"}, multiple: true}, collection: @categories, label: 'selecciona una categoria' %>
-      <%= image_tag restaurant.photo, size: "50x50"%> <%= f.input :photo, as: :file %>
+      <%= image_tag restaurant.photo, size: "50x50" if restaurant.photo.attcached?%> <%= f.input :photo, as: :file %>
       <div class="row">
         <div class="col">
           <%= f.submit restaurant.new_record? ? "Save": "Update", class:"btn btn-primary w-100" %>

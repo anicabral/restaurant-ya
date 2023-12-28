@@ -8,3 +8,5 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 pin "bootstrap", to: "bootstrap.min.js", preload: true
 pin "@popperjs/core", to: "popper.js", preload: true
 pin "slim-select", to: "https://ga.jspm.io/npm:slim-select@2.8.0/dist/slimselect.js"
+pin "mapbox-gl", to: "https://ga.jspm.io/npm:mapbox-gl@3.0.1/dist/mapbox-gl.js"
+pin "process", to: "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/browser/process-production.js"

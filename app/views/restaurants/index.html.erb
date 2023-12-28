@@ -1,8 +1,15 @@
 <div class="container mt-3">
   <div class="row mb-5">
+  <div class="col">
     <h6 class="text-warning">Restaurants</h6>
-    <% @restaurants.each do |restaurant| %>
-      <%= render "restaurants/restaurant", restaurant: restaurant %>
-    <%end %>
+      <% @restaurants.each do |restaurant| %>
+        <div class="col">
+          <%= render "restaurants/restaurant", restaurant: restaurant %>
+        </div>
+      <%end%>
+      <!-- INICIO MAPA -->
+      <div class="col">
+      </div>
+      <!--FIN MAPA -->
   </div>
 </div>
