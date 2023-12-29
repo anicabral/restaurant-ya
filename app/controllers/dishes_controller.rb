@@ -6,7 +6,7 @@ class DishesController < ApplicationController
   end
 
   def new
-    @restaurant.Restaurant.find(params[:restaurant_id])
+    @restaurant = Restaurant.find(params[:restaurant_id])
     @dish = Dish.new
   end
 

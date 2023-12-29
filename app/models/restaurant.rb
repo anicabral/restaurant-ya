@@ -1,9 +1,12 @@
 class Restaurant < ApplicationRecord
    # Asociaciones
    belongs_to :user
+
    has_many :category_restaurants
    has_many :categories, through: :category_restaurants
+
    has_one_attached :photo
+   has_one_attached :logo
    has_many :dishes
 
    # Validaciones

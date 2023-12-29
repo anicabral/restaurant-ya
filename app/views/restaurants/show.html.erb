@@ -35,6 +35,9 @@
         <h5 class="card-title"><%= dish.name %></h5>
       <p class="card-text"><%= dish.description %></p>
       <p class="text-success">Price: <%= dish.price %></p>
+      <!-- INICIO AGREGAR AL CARRITO-->
+      <%= buttom_to "Add to cart",line_items_path(dish_id: dish.id), class: "btn btn-primary" %>
+      <!-- FIN AGREGAR AL CARRITO-->
       </div>
     </div>
   </div>

@@ -1,0 +1,24 @@
+<h5>Carrito de compras</h5>
+<hr>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Foto</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Descripcion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cart.line_items.each do |item| %>
+      <tr>
+        <th scope="row"><%= image_tag item.dish.photo, size: "50x50" %></th>
+        <td><%= item.dish.name %></td>
+        <td><%= item.quantity %></td>
+        <td><%= item.price %></td>
+        <td><%= item.dish.description%></td>
+      </tr>
+    </tbody>
+  <% end %>
+</table>
